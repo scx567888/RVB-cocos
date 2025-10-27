@@ -1,0 +1,160 @@
+
+士兵.png
+size: 857,281
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+66666
+  rotate: true
+  xy: 739, 118
+  size: 64, 54
+  orig: 64, 54
+  offset: 0, 0
+  index: -1
+右大腿
+  rotate: false
+  xy: 795, 102
+  size: 60, 69
+  orig: 60, 69
+  offset: 0, 0
+  index: -1
+右大臂
+  rotate: false
+  xy: 669, 96
+  size: 68, 86
+  orig: 68, 86
+  offset: 0, 0
+  index: -1
+右小腿
+  rotate: false
+  xy: 748, 24
+  size: 49, 47
+  orig: 49, 47
+  offset: 0, 0
+  index: -1
+右小臂
+  rotate: true
+  xy: 796, 173
+  size: 106, 50
+  orig: 106, 50
+  offset: 0, 0
+  index: -1
+右护膝
+  rotate: true
+  xy: 799, 25
+  size: 37, 39
+  orig: 37, 39
+  offset: 0, 0
+  index: -1
+右脚
+  rotate: true
+  xy: 401, 2
+  size: 48, 32
+  orig: 48, 32
+  offset: 0, 0
+  index: -1
+头部
+  rotate: true
+  xy: 518, 65
+  size: 84, 80
+  orig: 84, 80
+  offset: 0, 0
+  index: -1
+左大腿
+  rotate: true
+  xy: 669, 36
+  size: 58, 77
+  orig: 62, 77
+  offset: 2, 0
+  index: -1
+左大臂
+  rotate: true
+  xy: 570, 4
+  size: 59, 77
+  orig: 59, 77
+  offset: 0, 0
+  index: -1
+左小腿
+  rotate: false
+  xy: 748, 73
+  size: 44, 43
+  orig: 44, 43
+  offset: 0, 0
+  index: -1
+左小臂
+  rotate: false
+  xy: 435, 9
+  size: 60, 41
+  orig: 60, 41
+  offset: 0, 0
+  index: -1
+左手
+  rotate: false
+  xy: 649, 4
+  size: 40, 30
+  orig: 40, 30
+  offset: 0, 0
+  index: -1
+左护膝
+  rotate: true
+  xy: 691, 5
+  size: 29, 35
+  orig: 29, 35
+  offset: 0, 0
+  index: -1
+左脚
+  rotate: false
+  xy: 799, 64
+  size: 50, 36
+  orig: 50, 36
+  offset: 0, 0
+  index: -1
+武器
+  rotate: false
+  xy: 401, 187
+  size: 287, 92
+  orig: 287, 92
+  offset: 0, 0
+  index: -1
+组 4
+  rotate: true
+  xy: 2, 5
+  size: 274, 397
+  orig: 276, 399
+  offset: 1, 1
+  index: -1
+背包
+  rotate: false
+  xy: 401, 52
+  size: 115, 97
+  orig: 115, 97
+  offset: 0, 0
+  index: -1
+裆部
+  rotate: true
+  xy: 600, 77
+  size: 108, 67
+  orig: 108, 67
+  offset: 0, 0
+  index: -1
+身体
+  rotate: false
+  xy: 690, 184
+  size: 104, 95
+  orig: 105, 95
+  offset: 1, 0
+  index: -1
+阴影
+  rotate: false
+  xy: 401, 151
+  size: 197, 34
+  orig: 197, 34
+  offset: 0, 0
+  index: -1
+颈部
+  rotate: true
+  xy: 518, 2
+  size: 61, 50
+  orig: 61, 50
+  offset: 0, 0
+  index: -1
