@@ -1,6 +1,7 @@
 import {_decorator, Component, Material, SpriteAtlas, Vec3} from 'cc';
 import {SpriteDynamicBatchRenderer} from "db://assets/scx/BatchRenderer/SpriteDynamicBatchRenderer.ts";
 import {Obj} from "db://assets/scx_test/TestAnimation/scripts/Obj.ts";
+import {Utils} from "db://assets/scx/Utils/Utils.ts";
 
 const {ccclass, property} = _decorator;
 
@@ -29,7 +30,7 @@ export class Test extends Component {
         for (let j = 0; j < 10000 * 5; j++) {
             let spriteRenderUnit = this.spriteDynamicBatchRenderer.createUnit();
             spriteRenderUnit.setVisible(true)
-            spriteRenderUnit.setPosition(Test.randomFloat(-50, 50), Test.randomFloat(-50, 50), Test.randomFloat(-50, 50));
+            spriteRenderUnit.setPosition(Utils.randomFloat(-50, 50), Utils.randomFloat(-50, 50), Utils.randomFloat(-50, 50));
 
             spriteRenderUnit.setFrame(this.list[0])
             // 给每个单元一个随机起始帧索引
@@ -57,10 +58,6 @@ export class Test extends Component {
 
         this.spriteDynamicBatchRenderer.update();
 
-    }
-
-    static randomFloat(min, max) {
-        return Math.random() * (max - min) + min;
     }
 
 }
