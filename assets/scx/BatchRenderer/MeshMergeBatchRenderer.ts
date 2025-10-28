@@ -1,4 +1,4 @@
-import {gfx, Material, Mesh, MeshRenderer, Node, Quat, utils, Vec3} from "cc";
+import {gfx, Layers, Material, Mesh, MeshRenderer, Node, Quat, utils, Vec3} from "cc";
 import {UnitTransform} from "./UnitTransform.ts";
 import {BatchRenderer} from "./BatchRenderer.ts"
 
@@ -144,6 +144,14 @@ class MeshMergeBatchRenderer implements BatchRenderer {
 
     getActive(): boolean {
         return this._node.active;
+    }
+
+    setLayer(name: string): void {
+        this._node.layer = Layers.nameToLayer(name);
+    }
+
+    getLayer(): string {
+        return Layers.layerToName(this._node.layer);
     }
 
     destroy(): void {
