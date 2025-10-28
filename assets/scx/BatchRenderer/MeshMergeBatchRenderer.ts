@@ -147,11 +147,11 @@ class MeshMergeBatchRenderer implements BatchRenderer {
     }
 
     setLayer(name: string): void {
-        this._node.layer = Layers.nameToLayer(name);
+        this._node.layer = 1 << Layers.nameToLayer(name);
     }
 
     getLayer(): string {
-        return Layers.layerToName(this._node.layer);
+        return Layers.layerToName(Math.log2(this._node.layer));
     }
 
     destroy(): void {

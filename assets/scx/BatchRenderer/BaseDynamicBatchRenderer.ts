@@ -81,7 +81,7 @@ abstract class BaseDynamicBatchRenderer<U extends RenderUnit> implements Dynamic
 
 
     setLayer(name: string): void {
-        this._node.layer = Layers.nameToLayer(name);
+        this._node.layer = 1 << Layers.nameToLayer(name);
         // 递归处理子 layer
         for (let [key, value] of this._chunks) {
             value.setLayer(name);
@@ -89,7 +89,7 @@ abstract class BaseDynamicBatchRenderer<U extends RenderUnit> implements Dynamic
     }
 
     getLayer() {
-        return Layers.layerToName(this._node.layer);
+        return Layers.layerToName(Math.log2(this._node.layer));
     }
 
     destroy(): void {
