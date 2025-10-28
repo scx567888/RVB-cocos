@@ -1,6 +1,7 @@
 import {_decorator, Component, Prefab, Vec3} from 'cc';
 import {MeshMergeBatchRenderer} from "db://assets/scx/BatchRenderer/MeshMergeBatchRenderer.ts";
 import {BatchRendererBuilder} from "db://assets/scx/BatchRenderer/BatchRendererBuilder.ts";
+import {Utils} from "db://assets/scx/Utils/Utils.ts";
 
 const {ccclass, property} = _decorator;
 
@@ -25,12 +26,11 @@ export class BatchRendererTest extends Component {
     start() {
         this.batchRenderer = BatchRendererBuilder.createByPrefab(10000 * 3, this.cube);
         this.batchRenderer.setParent(this.node);
+
         for (let j = 0; j < this.batchRenderer.capacity(); j++) {
             this.batchRenderer.setUnitVisible(j, true);
-            this.batchRenderer.setUnitPosition(j, BatchRendererTest.randomFloat(-100, 100), BatchRendererTest.randomFloat(-100, 100), BatchRendererTest.randomFloat(-100, 100))
-
+            this.batchRenderer.setUnitPosition(j, Utils.randomFloat(-100, 100), Utils.randomFloat(-100, 100), Utils.randomFloat(-100, 100))
         }
-        this.batchRenderer.update()
     }
 
     update(deltaTime: number) {
@@ -43,14 +43,10 @@ export class BatchRendererTest extends Component {
         );
 
         for (let j = 0; j < this.batchRenderer.capacity(); j++) {
-            this.batchRenderer.setUnitPosition(j, BatchRendererTest.randomFloat(-30, 30), BatchRendererTest.randomFloat(-30, 30), BatchRendererTest.randomFloat(-30, 30))
+            this.batchRenderer.setUnitPosition(j, Utils.randomFloat(-30, 30), Utils.randomFloat(-30, 30), Utils.randomFloat(-30, 30))
         }
 
         this.batchRenderer.update()
-    }
-
-    static randomFloat(min, max) {
-        return Math.random() * (max - min) + min;
     }
 
 }

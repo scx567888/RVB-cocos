@@ -7,7 +7,7 @@ const {ccclass, property} = _decorator;
 
 // 动态批处理方式
 @ccclass('DynamicBatchRendererTest')
-class DynamicBatchRendererTest extends Component {
+export class DynamicBatchRendererTest extends Component {
 
     // 预制体
     @property({type: Prefab})
