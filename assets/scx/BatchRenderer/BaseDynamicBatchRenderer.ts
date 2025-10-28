@@ -1,4 +1,4 @@
-import {Material, Mesh, Node, Quat, Vec3} from "cc";
+import {Layers, Material, Mesh, Node, Quat, Vec3} from "cc";
 import {RenderUnit} from "./RenderUnit.ts";
 import {DynamicBatchRenderer} from "./DynamicBatchRenderer.ts";
 import {SlotMeshMergeBatchRenderer} from "./SlotMeshMergeBatchRenderer.ts";
@@ -80,6 +80,19 @@ abstract class BaseDynamicBatchRenderer<U extends RenderUnit> implements Dynamic
         return this._node.active;
     }
 
+
+    setLayer(name: string): void {
+        this._node.layer = Layers.nameToLayer(name);
+        // 递归处理子 layer
+        for (let [key, value] of this._chunks) {
+            value.setLayer(name);
+        }
+    }
+
+    getLayer() {
+        return Layers.layerToName(this._node.layer);
+    }
+
     destroy(): void {
         for (let [key, value] of this._chunks) {
             value.destroy();
@@ -122,6 +135,7 @@ abstract class BaseDynamicBatchRenderer<U extends RenderUnit> implements Dynamic
         if (batchRenderer == null) {
             batchRenderer = new SlotMeshMergeBatchRenderer(this._chunkCapacity, this._rawMesh, this._material);
             batchRenderer.setParent(this._node)
+            batchRenderer.setLayer(this.getLayer());
             chunkID = this._nextChunkID++;
             index = batchRenderer.allocate();
             this._chunks.set(chunkID, batchRenderer);
