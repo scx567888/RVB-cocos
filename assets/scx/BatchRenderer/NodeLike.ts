@@ -27,6 +27,10 @@ interface NodeLike {
 
     getActive(): boolean;
 
+    setLayer(name: string): void;
+
+    getLayer(): string;
+
     destroy(): void;
 
 }
