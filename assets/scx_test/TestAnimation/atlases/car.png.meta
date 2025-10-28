@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "22479738-9c94-45b0-b940-f42c52d484dd",
+  "uuid": "fcfd5236-371f-4ccd-849b-cf4d33eca326",
   "files": [
     ".json",
     ".png"
@@ -10,19 +10,19 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "22479738-9c94-45b0-b940-f42c52d484dd@6c48a",
-      "displayName": "士兵",
+      "uuid": "fcfd5236-371f-4ccd-849b-cf4d33eca326@6c48a",
+      "displayName": "car",
       "id": "6c48a",
       "name": "texture",
       "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
         "minfilter": "linear",
         "magfilter": "linear",
-        "mipfilter": "none",
+        "mipfilter": "nearest",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "22479738-9c94-45b0-b940-f42c52d484dd",
+        "imageUuidOrDatabaseUri": "fcfd5236-371f-4ccd-849b-cf4d33eca326",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "type": "texture",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "22479738-9c94-45b0-b940-f42c52d484dd@6c48a"
+    "redirect": "fcfd5236-371f-4ccd-849b-cf4d33eca326@6c48a"
   }
 }
