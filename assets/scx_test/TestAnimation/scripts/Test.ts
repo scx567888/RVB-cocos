@@ -1,6 +1,6 @@
 import {_decorator, Component, Material, SpriteAtlas, Vec3} from 'cc';
 import {SpriteDynamicBatchRenderer} from "db://assets/scx/BatchRenderer/SpriteDynamicBatchRenderer.ts";
-import {Obj} from "db://assets/test/TestAnimation/scripts/Obj.ts";
+import {Obj} from "db://assets/scx_test/TestAnimation/scripts/Obj.ts";
 
 const {ccclass, property} = _decorator;
 
