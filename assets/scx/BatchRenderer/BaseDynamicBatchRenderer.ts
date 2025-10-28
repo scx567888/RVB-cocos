@@ -4,7 +4,6 @@ import {DynamicBatchRenderer} from "./DynamicBatchRenderer.ts";
 import {SlotMeshMergeBatchRenderer} from "./SlotMeshMergeBatchRenderer.ts";
 import {BatchRenderer} from "./BatchRenderer.ts";
 
-
 abstract class BaseDynamicBatchRenderer<U extends RenderUnit> implements DynamicBatchRenderer<U> {
 
     // 单个分块的容量
@@ -127,7 +126,7 @@ abstract class BaseDynamicBatchRenderer<U extends RenderUnit> implements Dynamic
                 batchRenderer = value;
                 chunkID = key;
                 index = value.allocate();
-                break
+                break;
             }
         }
 
