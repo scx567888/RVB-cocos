@@ -1,4 +1,5 @@
 import {_decorator, Component, instantiate, Prefab, Vec3} from 'cc';
+import {Utils} from "db://assets/scx/Utils/Utils.ts";
 
 const {ccclass, property} = _decorator;
 
@@ -23,7 +24,7 @@ export class NormalTest extends Component {
     start() {
         for (let j = 0; j < 10000 * 3; j++) {
             let node = instantiate(this.cube);
-            node.setPosition(NormalTest.randomFloat(-100, 100), NormalTest.randomFloat(-100, 100), NormalTest.randomFloat(-100, 100))
+            node.setPosition(Utils.randomFloat(-100, 100), Utils.randomFloat(-100, 100), Utils.randomFloat(-100, 100))
             node.parent = this.node;
             this.list.push(node)
         }
@@ -39,13 +40,9 @@ export class NormalTest extends Component {
         );
 
         for (let j = 0; j < this.list.length; j++) {
-            this.list[j].setPosition(NormalTest.randomFloat(-30, 30), NormalTest.randomFloat(-30, 30), NormalTest.randomFloat(-30, 30))
+            this.list[j].setPosition(Utils.randomFloat(-30, 30), Utils.randomFloat(-30, 30), Utils.randomFloat(-30, 30))
         }
 
-    }
-
-    static randomFloat(min, max) {
-        return Math.random() * (max - min) + min;
     }
 
 }
