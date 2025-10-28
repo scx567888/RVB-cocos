@@ -52,7 +52,7 @@ class SpriteDynamicBatchRenderer extends BaseDynamicBatchRenderer<SpriteRenderUn
         let halfWidth = (width / pixelsToUnit) / 2;
         let halfHeight = (height / pixelsToUnit) / 2;
 
-        // 创建顶点 positions（x, y, z）
+        // 创建顶点 positions (x, y, z)
         let positions = [
             -halfWidth, -halfHeight, 0,  // 左下
             halfWidth, -halfHeight, 0,  // 右下

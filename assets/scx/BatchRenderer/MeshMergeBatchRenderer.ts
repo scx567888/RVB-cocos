@@ -307,7 +307,7 @@ class MeshMergeBatchRenderer implements BatchRenderer {
         let unitTransform = this._unitTransforms[index];
         // 不可见无需更新
         if (!unitTransform.visible) {
-            return
+            return;
         }
         this.updateUnitVertices(index, unitTransform);
     }
