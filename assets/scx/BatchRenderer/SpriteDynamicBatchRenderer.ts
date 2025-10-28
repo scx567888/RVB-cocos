@@ -100,9 +100,10 @@ class SpriteDynamicBatchRenderer extends BaseDynamicBatchRenderer<SpriteRenderUn
 
         material.initialize({
             effectName: "builtin-unlit",
-            technique: 1,
+            technique: 0,
             defines: {
-                USE_TEXTURE: true
+                USE_TEXTURE: true,
+                USE_ALPHA_TEST: true
             },
             states: {
                 rasterizerState: {
