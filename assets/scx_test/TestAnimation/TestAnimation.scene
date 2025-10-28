@@ -307,7 +307,7 @@
     "_enabled": true,
     "__prefab": null,
     "atlas": {
-      "__uuid__": "2a214396-944e-4060-a981-680702113a79",
+      "__uuid__": "1e35e063-b9a4-4edd-8f9d-5043069c840a",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "material": null,

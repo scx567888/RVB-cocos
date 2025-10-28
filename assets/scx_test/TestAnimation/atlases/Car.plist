@@ -1709,13 +1709,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>car.png</string>
+            <string>Car.png</string>
             <key>size</key>
             <string>{3940,2988}</string>
             <key>smartupdate</key>
             <string>$TexturePacker:SmartUpdate:40c24b55b9803c0d46e65eb7d9228eae:08d718fcd20ad7e05073dc8201beef94:e8399633eb0ffba970d9265eb72f0c5b$</string>
             <key>textureFileName</key>
-            <string>car.png</string>
+            <string>Car.png</string>
         </dict>
     </dict>
 </plist>
