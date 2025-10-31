@@ -94,13 +94,19 @@ class SpriteDynamicBatchRenderer extends BaseDynamicBatchRenderer<SpriteRenderUn
     }
 
     static createMaterial(spriteAtlas: SpriteAtlas): Material {
+        // 当前的效果 实际上是 同时开启了 半透明和深度写入, 这会带来以下效果
+        // 1, 材质支持半透明, 但这并不是完全正确的半透明
+        // 2, 相对于其他物体, 可以呈现正确的半透明.
+        // 3, 相对于同一网格内的面, 则会出现不正确的半透明.
+        // 4, 因为深度写入的原因, 完全不透明的物体 遮挡顺序是正确的.
+
         let texture = spriteAtlas.getTexture();
 
         let material = new Material();
 
         material.initialize({
             effectName: "builtin-unlit",
-            technique: 0,
+            technique: 3, // alpha-blend
             defines: {
                 USE_TEXTURE: true,
                 USE_ALPHA_TEST: true
@@ -108,12 +114,16 @@ class SpriteDynamicBatchRenderer extends BaseDynamicBatchRenderer<SpriteRenderUn
             states: {
                 rasterizerState: {
                     cullMode: gfx.CullMode.NONE, // 这里设置剔除模式
+                },
+                depthStencilState: {
+                    depthTest: true,      // 开启深度测试
+                    depthWrite: true      // 开启深度写入
                 }
             }
         })
 
         material.setProperty("mainTexture", texture)
-
+        material.setProperty('alphaThreshold', 0.01); // 0 ~ 1
         return material;
     }
 
